@@ -2,8 +2,8 @@
 const Item = require('./Item');
 const Type = require('./Type');
 const Tag = require('./Tag');
+const User = require('./User')
 const ItemTag = require('./ItemTag');
-const User = require('./User');
 
 // Items belongsTo Type
 Item.belongsTo(Type, {
