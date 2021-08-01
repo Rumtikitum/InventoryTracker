@@ -1,0 +1,37 @@
+{
+  "name": "user-model",
+  "version": "1.0.0",
+  "description": "User-authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rumtikitum/InventoryLite.git"
+  },
+  "keywords": [],
+  "author": "diana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rumtikitum/InventoryLite/issues"
+  },
+  "homepage": "https://github.com/Rumtikitum/InventoryLite#readme",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.5"
+  }
+}
