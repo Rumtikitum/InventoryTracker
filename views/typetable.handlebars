@@ -3,4 +3,8 @@
 
 {{#each types as |type| }}
         <li><strong>Id: {{type.id}} </strong><strong>Name: </strong>{{type.type_name}}
+          {{else}}
+                <li>
+                  nothing here
+                </li>
 {{/each}}
