@@ -12,6 +12,10 @@ router.get('/', async (req, res) => {
     })
 
 router.get('/typetable', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
     try {
       const typeData = await Type.findAll();
       // Serialize data so the template can read it
@@ -28,6 +32,10 @@ router.get('/typetable', async (req, res) => {
   });
 
 router.get('/edit', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
   console.log('======================');
     res.render('edit', {
         loggedIn: req.session.loggedIn
@@ -35,6 +43,10 @@ router.get('/edit', (req, res) => {
     })
 
 router.get('/addtype', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
   console.log('======================');
     res.render('addtype', {
         loggedIn: req.session.loggedIn
@@ -42,6 +54,10 @@ router.get('/addtype', (req, res) => {
     })
 
 router.get('/remove', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
   console.log('======================');
     res.render('remove', {
         loggedIn: req.session.loggedIn
@@ -58,6 +74,10 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/toc', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
   try {
     // Get all items and JOIN with user data
     const itemData = await Item.findAll({
