@@ -3,7 +3,7 @@ const Item = require('./Item');
 const Type = require('./Type');
 const Tag = require('./Tag');
 const ItemTag = require('./ItemTag');
-const User = require('./user');
+const User = require('./User');
 
 module.exports = { User };
 
